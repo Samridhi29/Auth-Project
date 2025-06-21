@@ -11,7 +11,11 @@ exports.doHashValidation = (value, hashedValue) => {
 	return result;
 };
 
-// exports.hmacProcess = (value, key) => {
-// 	const result = createHmac('sha256', key).update(value).digest('hex');
-// 	return result;
-// };
+//Hash-based Message Authentication Code
+exports.hmacProcess = (value, key) => {
+	const result = createHmac('sha256', key)  //sha256 algo, key is secret
+	               .update(value)  //value is the data to be hashed
+	               .digest('hex'); //digest is the final output, in hex format
+	return result;
+};
+
