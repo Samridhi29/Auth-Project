@@ -8,8 +8,8 @@ const router = express.Router();
 // 	res.json({message:"Signup success"})
 // })
 router.post('/signup', authController.signup);
-// router.post('/signin', authController.signin);
-// router.post('/signout', identifier, authController.signout);
+router.post('/signin', authController.signin);
+router.post('/signout', identifier, authController.signout);
 
 // router.patch(
 // 	'/send-verification-code',
